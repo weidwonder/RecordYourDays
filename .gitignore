@@ -1,0 +1,22 @@
+# 隐私数据：录音、转写稿、日记、缓存、声纹片段，一律不进 git
+raw/
+transcripts/
+diary/
+cache/
+tmp/
+logs/
+voiceprints/clips/
+
+# 真实配置（仓库里只放 *.example.json）
+dairy.config.json
+speakers.json
+
+# 依赖与构建产物
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+
+# 个人记忆与聊天记录
+memory/
+wechat/

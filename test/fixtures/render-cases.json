@@ -1,0 +1,181 @@
+[
+ {
+  "name": "空",
+  "utts": [],
+  "expected": "<no speech detected>\n"
+ },
+ {
+  "name": "合并与静音",
+  "utts": [
+   {
+    "start": 28.55,
+    "end": 32.1,
+    "label": "我",
+    "text": "甲。"
+   },
+   {
+    "start": 33.7,
+    "end": 36.4,
+    "label": "我",
+    "text": "乙。"
+   },
+   {
+    "start": 80,
+    "end": 81,
+    "label": "伴侣",
+    "text": "丙？"
+   },
+   {
+    "start": 81.5,
+    "end": 82,
+    "label": "伴侣",
+    "text": "丁。"
+   }
+  ],
+  "expected": "[00:28] 我 甲。乙。\n[00:36] <no speech detected in this segment>\n[01:20] 伴侣 丙？丁。\n"
+ },
+ {
+  "name": "其他不合并、乱序输入",
+  "utts": [
+   {
+    "start": 2,
+    "end": 3,
+    "label": "其他",
+    "text": "b"
+   },
+   {
+    "start": 0,
+    "end": 1,
+    "label": "其他",
+    "text": "a"
+   },
+   {
+    "start": 3.5,
+    "end": 4,
+    "label": "伴侣",
+    "text": "c"
+   },
+   {
+    "start": 4.5,
+    "end": 5,
+    "label": "孩子",
+    "text": "d"
+   }
+  ],
+  "expected": "[00:00] 其他 a\n[00:02] 其他 b\n[00:03] 伴侣 c\n[00:04] 孩子 d\n"
+ },
+ {
+  "name": "开头静音超过 30 秒",
+  "utts": [
+   {
+    "start": 45.2,
+    "end": 46,
+    "label": "孩子",
+    "text": "嗯。"
+   }
+  ],
+  "expected": "[00:00] <no speech detected in this segment>\n[00:45] 孩子 嗯。\n"
+ },
+ {
+  "name": "满一小时",
+  "utts": [
+   {
+    "start": 3599.5,
+    "end": 3600.4,
+    "label": "我",
+    "text": "x"
+   },
+   {
+    "start": 3700,
+    "end": 3701,
+    "label": "我",
+    "text": "y"
+   },
+   {
+    "start": 9549.2,
+    "end": 9550,
+    "label": "其他",
+    "text": "z"
+   }
+  ],
+  "expected": "[00:00] <no speech detected in this segment>\n[59:59] 我 x\n[1:00:00] <no speech detected in this segment>\n[1:01:40] 我 y\n[1:01:41] <no speech detected in this segment>\n[2:39:09] 其他 z\n"
+ },
+ {
+  "name": "重叠支路同一时间两行",
+  "utts": [
+   {
+    "start": 10,
+    "end": 12,
+    "label": "我",
+    "text": "前面。"
+   },
+   {
+    "start": 13,
+    "end": 15,
+    "label": "我",
+    "text": "一路。"
+   },
+   {
+    "start": 13,
+    "end": 15,
+    "label": "伴侣",
+    "text": "另一路。"
+   },
+   {
+    "start": 15.5,
+    "end": 16,
+    "label": "伴侣",
+    "text": "后面。"
+   }
+  ],
+  "expected": "[00:10] 我 前面。一路。\n[00:13] 伴侣 另一路。后面。\n"
+ },
+ {
+  "name": "间隔恰好 2 秒合并、2.01 秒不合并",
+  "utts": [
+   {
+    "start": 0,
+    "end": 1,
+    "label": "我",
+    "text": "a"
+   },
+   {
+    "start": 3,
+    "end": 4,
+    "label": "我",
+    "text": "b"
+   },
+   {
+    "start": 6.01,
+    "end": 7,
+    "label": "我",
+    "text": "c"
+   }
+  ],
+  "expected": "[00:00] 我 ab\n[00:06] 我 c\n"
+ },
+ {
+  "name": "后一句结束更早",
+  "utts": [
+   {
+    "start": 0,
+    "end": 10,
+    "label": "我",
+    "text": "a"
+   },
+   {
+    "start": 5,
+    "end": 6,
+    "label": "我",
+    "text": "b"
+   },
+   {
+    "start": 40,
+    "end": 41,
+    "label": "我",
+    "text": "c"
+   }
+  ],
+  "expected": "[00:00] 我 ab\n[00:06] <no speech detected in this segment>\n[00:40] 我 c\n"
+ }
+]

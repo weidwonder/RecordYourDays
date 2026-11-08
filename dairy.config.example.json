@@ -1,0 +1,25 @@
+{
+  "timeZone": "Asia/Shanghai",
+  "engine": "cpu",
+  "fallbackToCpu": true,
+  "unknownLabel": "其他",
+  "modelDir": "~/.cache/record-your-days/models/sherpa-onnx",
+  "numThreads": 4,
+  "storage": "local",
+  "keepLocal": [],
+  "recorder": {
+    "dir": "/Volumes/RECORDER/RECORD",
+    "pattern": "YYYYMMDD_HHmmss",
+    "extensions": [
+      ".MP3"
+    ],
+    "timeZone": "Asia/Shanghai",
+    "deleteAfterTranscribe": false
+  },
+  "gpu": {
+    "envDir": "~/.cache/record-your-days/engine-env",
+    "modelRoot": "~/.cache/record-your-days/models",
+    "gpus": null,
+    "minFreeMiB": 10000
+  }
+}

@@ -1,0 +1,15 @@
+# GPU 方案主环境的直接依赖；requirements-lock.txt 是在 Linux（Python 3.10、CUDA 12 驱动）上按此安装后 pip freeze 的完整锁定。
+torch==2.5.1
+torchaudio==2.5.1
+numpy==1.26.4
+funasr==1.4.21
+modelscope==1.40.2
+clearvoice==0.1.2
+sherpa_onnx==2.0.1
+soundfile==0.12.1
+PyYAML==6.0.3
+nvidia-ml-py==13.615.71
+# 公开集复现（engine/eval/）用
+RapidFuzz==3.14.5
+opencc-python-reimplemented==0.1.7
+scipy==1.15.3

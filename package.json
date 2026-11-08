@@ -1,0 +1,22 @@
+{
+  "name": "record-your-days",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "import": "node src/cli.mjs import",
+    "transcribe": "node src/cli.mjs transcribe",
+    "run": "node src/cli.mjs run",
+    "voice": "node src/voice.mjs",
+    "test": "node --test",
+    "models": "node src/cli.mjs models",
+    "setup-gpu": "node src/cli.mjs setup-gpu"
+  },
+  "dependencies": {
+    "audio-decode": "^3.12.0",
+    "sherpa-onnx-node": "^1.13.8"
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "name": "我",
+    "role": "family",
+    "display": "我",
+    "threshold": 0.35,
+    "enroll": [
+      {"clip": "voiceprints/clips/20260101_080000_12000-15500.wav", "source": "raw/2026-01-01/20260101_080000.MP3", "start": 12, "end": 15.5}
+    ]
+  },
+  {
+    "name": "同事A",
+    "role": "known",
+    "display": "同事A",
+    "threshold": 0.4,
+    "enroll": [
+      {"clip": "voiceprints/clips/20260101_080000_300000-304000.wav", "source": "raw/2026-01-01/20260101_080000.MP3", "start": 300, "end": 304}
+    ]
+  }
+]
